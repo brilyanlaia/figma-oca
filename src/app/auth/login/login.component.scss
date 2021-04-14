@@ -1,0 +1,40 @@
+.text-shadow{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form label{
+    color: rgba(154, 154, 154, 0.4);
+    font-style: italic;
+}
+
+form span.input-group-text {
+    color: rgba(154, 154, 154, 0.4);
+    background-color: unset;
+    border-left: unset;
+}
+
+form .input-group input.form-control {
+    border-right: unset;
+
+
+}
+
+.border-half{
+    border-right: 1px solid #ced4da;
+    /* margin-top: 6px; */
+    /* margin-bottom: 6px; */
+    position: absolute;
+    /* width: 20px; */
+    /* background: red; */
+    height: 60%;
+    /* top: 50%; */
+    bottom: 20%;
+
+}
+
+.border-container{
+    border-top: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+    width: 20px;
+}
+
