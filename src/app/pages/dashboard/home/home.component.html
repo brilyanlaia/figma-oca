@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="col-12">
+    <div class="card top-border">
+        <div class="card-body">
+            <h2 class="font-weight-bold">Hello, Welcome to OCA!</h2>
+            <p>Let’s start make some noise and make your campaign great again! click here to spread your messages.</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        Call
+                    </div>
+                    <div class="col-6 text-right font-weight-bold" style="color: #22B9FF;font-size: large;">
+                        4840 Second
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        SMS
+                    </div>
+                    <div class="col-6 text-right font-weight-bold" style="color: #FFB822;font-size: large;">
+                       123 messages
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        Email
+                    </div>
+                    <div class="col-6 text-right font-weight-bold" style="color: #F554E9;font-size: large;">
+                        7710 mails
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        Whatsapp
+                    </div>
+                    <div class="col-6 text-right font-weight-bold" style="color: #1DC9B7;font-size: large;">
+                        300 messages
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-12 pb-3 pt-3">
+        <ngx-datatable class="material" [sortType]="'multi'" [headerHeight]="80" [footerHeight]="50"
+        [rowHeight]="'auto'" [rows]="rows" [columnMode]="'force'" [scrollbarV]="false"
+        [scrollbarH]="true" [rowHeight]="'auto'">
+        <ngx-datatable-column name="Id Name" prop="id_name">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Type" prop="type">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Campaign" prop="campaign">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+  
+
+        <ngx-datatable-column name="Total Blast" prop="total_blast">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+            
+        <ngx-datatable-column name="Status" prop="status">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <span [style.color]="getColor(value)">{{ value }}</span>
+            </ng-template>
+          </ngx-datatable-column>
+
+        <ngx-datatable-column name="Date" prop="date">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value | date: "medium"}}
+          </ng-template>
+        </ngx-datatable-column>
+
+
+      </ngx-datatable>
+    </div>
+</div>

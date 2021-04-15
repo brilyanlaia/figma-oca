@@ -1,1 +1,44 @@
-<p>sidebar works!</p>
+<nav
+  class="sidebar"
+  [ngClass]="{ sidebarPushRight: isActive, collapsed: collapsed }"
+>
+  <div class="logo-area">
+    <img src="../../../../assets/OCA-logo.png" class="img-fluid" alt="">
+   
+  </div>
+  <div class="list-group">
+    <a
+      routerLink="/dashboard/home"
+      tooltip="Dashboard"
+      routerLinkActive="router-link-active"
+      class="list-group-item"
+      ><i class="fa fa-home"></i><span>Home</span></a
+    >
+    <div class="nested-menu"  >
+      <a class="list-group-item" (click)="addExpandClass('sms')">
+        <i class="fa fa-wrench"></i>
+        <span>SMS</span>&nbsp;
+        <i class="fa fa-caret-down"></i>
+      </a>
+      <li class="nested" [class.expand]="showMenu === 'sms'">
+        <ul class="submenu">
+          <li>
+            <a
+              routerLinkActive="router-link-active"
+              routerLink="/dashboard/sms"
+              class="list-group-item"
+            >
+              <span>SMS</span>
+            </a>
+          </li>
+  
+        </ul>
+      </li>
+    </div>
+
+  
+   
+  </div>
+
+
+</nav>

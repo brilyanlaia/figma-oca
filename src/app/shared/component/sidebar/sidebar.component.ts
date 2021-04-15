@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   showMenu: string;
+  isActive: boolean;
   pushRightClass: string;
   collapsed: boolean;
 
@@ -14,7 +15,7 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    this.isActive = false;
     this.collapsed = false;
     this.showMenu = "";
     this.pushRightClass = "push-right";

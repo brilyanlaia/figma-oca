@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="col-12">
+        <h1 class="text-title">SMS Scheduler</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-md-7">
+        <div class="mb-3 w-50">
+            <label for="" class="form-label">Broadcast Name</label>
+            <input type="text" name="" id="" class="form-control" placeholder="name of your broadcast">
+          </div>
+          <div class="mb-3 w-50">
+            <label for="" class="form-label">Phonebook</label>
+            <select placeholder="Select your phonebook" class="form-control" name="" id="">
+               <option value="">Select your phonebook</option>
+                <option value="08123123123">Customer 1</option>
+                <option value="08123123123">Customer 2</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="" class="form-label">Message</label>
+            <textarea class="form-control" [(ngModel)]="message" (ngModelChange)="messageType($event)" cols="80" rows="10" maxlength="1024">
+            </textarea>
+            <div class="text-right">
+                <small>Character {{currChar}}/{{maxChar}}</small>
+            </div>
+        
+          </div>
+
+          
+    </div>
+
+    <div class="col-12 col-md-10">
+        <h3 class="font-weight-bold">Schedule</h3>
+        <p class="text-muted font-italic">When and how often do you want to broadcast this messages?</p>
+    </div>
+
+    <div class="col-12 col-md-3">
+        <h5 class="font-weight-bold">Run on</h5>
+    </div>
+    <div class="col-12 col-md-7">
+        <div class="custom-control custom-checkbox mb-3 custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+            <label class="custom-control-label" for="customCheck">Mon</label>
+          </div>
+
+        <div class="custom-control custom-checkbox mb-3 custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
+            <label class="custom-control-label" for="customCheck2">Tue</label>
+          </div>
+        <div class="custom-control custom-checkbox mb-3 custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="customCheck3" name="example3">
+            <label class="custom-control-label" for="customCheck3">Wed</label>
+          </div>
+        <div class="custom-control custom-checkbox mb-3 custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="customCheck4" name="example4">
+            <label class="custom-control-label" for="customCheck4">Thu</label>
+          </div>
+        <div class="custom-control custom-checkbox mb-3 custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="customCheck5" name="example5">
+            <label class="custom-control-label" for="customCheck5">Fri</label>
+          </div>
+        <div class="custom-control custom-checkbox mb-3 custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="customCheck6" name="example6">
+            <label class="custom-control-label" for="customCheck6">Sat</label>
+          </div>
+        <div class="custom-control custom-checkbox mb-3 custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="customCheck7" name="example7">
+            <label class="custom-control-label" for="customCheck7">Sun</label>
+          </div>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
+            <label class="custom-control-label" for="customRadio">Once a day</label>
+            &nbsp;
+          <span>At</span> &nbsp;<select>
+            <option value="">2AM</option>
+            <option value="">3AM</option>
+        </select> WIB
+          </div>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="customRadio2" name="example2" value="custom2">
+            <label class="custom-control-label" for="customRadio2">At intervals</label>
+            &nbsp;
+          <span>Every</span> &nbsp;<select>
+            <option value="">6</option>
+            <option value="">7</option>
+        </select>
+        <select>
+            <option value="">hours</option>
+        </select>
+        from
+        <select>
+            <option value="">2AM</option>
+            <option value="">3AM</option>
+        </select> WIB
+          </div>
+
+      
+    </div>
+
+    
+    
+</div>
+
+<div class="row">
+    <div class="col-12 col-md-7 text-right">
+        <br>
+        <button class="btn btn-pink w-50">Send Message</button>
+    </div>
+</div>

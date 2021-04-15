@@ -1,0 +1,36 @@
+<app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
+
+<section class="main-container" [ngClass]="{ collapsed: collapedSideBar }"> 
+    <div class="bg-blue">
+        <div class="navbar navbar-expand-lg">
+           <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+               <!-- <span class="navbar-toggler-icon"></span> -->
+               <i class="fa fa-bars text-dark" aria-hidden="true"></i>
+             </button>
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                <div class="input-group mb-3">
+                    <span class="input-group-text transparent-col" id="basic-addon1"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control transparent-input" placeholder="Any help?" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  
+               </li>
+             </ul>
+             <div class="row justify-content-center align-items-center row-width">
+                <div class="col-10 p-0 text-right">
+                   <span><strong>Hi,Adjie!</strong></span>
+                   <p>Adjie_g4ant3ng@banget.com</p>
+                </div>
+                <div class="col-2" style="align-self: baseline;">
+                    <i class="fas fa-user-circle profile-icon"></i>
+                </div>
+            </div>
+        </div>
+       </div>   
+
+
+    <div class="page-container" (click)="closeSidebar()">
+
+        <router-outlet></router-outlet>
+    </div>
+</section>

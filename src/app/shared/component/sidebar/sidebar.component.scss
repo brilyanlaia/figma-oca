@@ -1,13 +1,15 @@
-$topnav-background-color: white;
-$blue-color: #212d61;
-$yellow-color: #f8c246;
+$topnav-background-color: #ED1260;
+$blue-color: #fff;
+$yellow-color: #fff;
 
 .logo-area{
   padding: 0.75rem 1.5rem;
+  margin-top: 40px;
+    margin-bottom: 70px;
 }
 
 .sidebar {
-  
+  filter: drop-shadow(6px 0px 10px rgba(11, 11, 11, 0.161));
   border-radius: 0;
   position: fixed;
   z-index: 1000;
@@ -43,10 +45,9 @@ $yellow-color: #f8c246;
       }
     }
     a:hover {
-      background-color: rgba(248, 194, 70, 0.2);
-      
-      border-left: 3px solid $yellow-color;
-      color: $yellow-color;
+      background-color: rgb(255 215 215 / 20%);
+      border-left: 3px solid #ffffff;
+      color: #ffffff;
     }
     a.router-link-active {
       background-color: rgba(248, 194, 70, 0.2);

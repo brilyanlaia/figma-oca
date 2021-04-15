@@ -1,0 +1,20 @@
+label{
+    font-weight: 500;
+}
+
+input[type=text]{
+    font-style: italic;
+}
+
+select{
+    font-style: italic;
+}
+
+.checkbox-inline{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color: #ed1260
+}
